@@ -1,0 +1,426 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: black;
+    height: 90px;
+    box-shadow: rgba(0, 0, 0, 0.686) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    color: white;
+    justify-content: space-between;
+}
+
+.logoPortfolio
+{
+    width: 70px;
+    aspect-ratio: 1/1;
+    margin-left: 20px;
+}
+
+.menu
+{
+    display: flex;
+    gap: 40px;
+}
+
+.menu a
+{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.menu a:hover
+{
+    color: #0b6ab0;
+    text-decoration: underline;
+    transform: scale(1.2);
+    transition: .4s ease;
+}
+
+.socialMedias
+{
+    display: flex;
+    gap: 10px;
+    margin-right: 30px;
+}
+
+.socialMedias a img
+{
+    width: 35px;
+    aspect-ratio: 1/1;
+}
+
+.socialMedias a img:hover
+{
+    opacity: 70%;
+}
+
+body
+{
+    background: #012945;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#divImgAPropos,
+#divImgProjets,
+#divImgContact
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.imgQSJ,
+.imgProjets,
+.imgContact
+{
+    width: 350px;
+}
+
+.sectionAPropos
+{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+/*Exercice 2 : Apparition en douceur (fade-in)*/
+@keyframes fadeIn
+{
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
+
+.fade-in
+{
+    animation: fadeIn 3s ease-in-out;
+}
+
+/*Exercice 3 : Animation d’entrée (slide-in)*/
+@keyframes slideIn
+{
+    from
+    {
+        transform: translateX(-100%); /* La photo de Anni Versaire commence hors de l'écran */
+        opacity: 0; /* et est invisible */
+    }
+    to
+    {
+        transform: translateX(0);
+        opacity: 1; 
+    }
+}
+
+.imgAnniVersaire
+{
+    width: auto;
+    height: auto;
+    max-width: 400px;
+    max-height: 600px;
+    border-radius: 94px 10px 94px 10px;
+    -webkit-border-radius: 94px 10px 94px 10px;
+    -moz-border-radius: 94px 10px 94px 10px;
+    box-shadow: rgba(10, 8, 31, 0.528) 0px 25px 50px -12px;
+    height: auto;
+    animation: slideIn 1.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.description p
+{
+    font-size: 18px;
+    line-height: 1.5; /*interligne*/
+    margin-top: 15px;
+}
+
+#sectionProjets
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.gameCard
+{
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    background: #021827;
+    padding: 20px;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.gameCard img
+{
+    width: auto;
+    max-width: 80%;
+    aspect-ratio: 1/1;
+    margin-top: 10px;
+}
+
+.gameCard h1
+{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.gameCard p
+{
+    font-size: 16px;
+    line-height: 1.5; /*interligne*/
+    margin-top: 15px;
+}
+
+#sectionContact
+{
+    display: flex;
+    background: #0b6ab0;
+    width: 45%;
+    padding: 0 40px;
+    margin: 0 auto;
+    border-radius: 18px;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+}
+
+form label
+{
+    margin-top: 30px;
+}
+
+form input
+{
+    padding: 8px;
+    outline: none;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+form textarea
+{
+    min-height: 150px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    padding: 8px;
+    line-height: 1.5; /*interligne*/
+}
+
+/*Exercice 1 : Transition sur les boutons*/
+form button
+{
+    margin: 30px auto;
+    color: white;
+    padding: 12px 17px;
+    width: 90px;
+    background: #ec58ec;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in;
+}
+
+form button:hover
+{
+    background-color: #cf4acf;
+    transform: scale(1.1);
+}
+
+footer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+    height: 200px;
+    gap: 15px;
+    bottom: 0;
+    margin-top: 80px;
+    padding-top: 20px;
+}
+
+footer p
+{
+    color: white;
+}
+
+.reseaux
+{
+    display: flex;
+    gap: 20px;
+}
+
+/*Exercice 5 : Rotation d’une icône*/
+.reseaux img
+{
+    width: 40px;
+    aspect-ratio: 1/1;
+    transition: transform 0.3s ease;
+}
+
+.reseaux img:hover
+{
+    opacity: 70%;
+    transform: rotate(360deg);
+}
+
+.copyright
+{
+    color: rgb(88, 89, 90);
+    font-size: 12px;
+}
+
+
+
+
+/*Responsivité*/
+@media (max-width: 850px)
+{
+    header
+    {
+        height: auto;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    header .logoPortfolio
+    {
+        width: 50px;
+    }
+
+    header .socialMedias
+    {
+        display: none;
+    }
+
+    .menu
+    {
+        gap: 15px;
+        align-items: center;
+    }
+
+    .menu a
+    {
+        font-size: 16px;
+        text-align: center;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 850px)
+{
+    .sectionAPropos
+    {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imgAnniVersaire
+    {
+        width: 70%;
+    }
+
+    .description p
+    {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px)
+{
+    #sectionProjets
+    {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .gameCard
+    {
+        min-width: 300px;
+        max-width: 90%;
+    }
+}
+
+@media(max-width: 1200px)
+{
+    #sectionProjets
+    {
+        gap: 20px;
+    }
+
+    .gameCard
+    {
+        width: 40%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #sectionContact {
+        width: 90%;
+        padding: 20px;
+    }
+
+    form label {
+        font-size: 14px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+        gap: 10px;
+    }
+
+    .reseaux {
+        justify-content: center;
+    }
+
+    .reseaux img {
+        width: 30px;
+    }
+}
+
+
